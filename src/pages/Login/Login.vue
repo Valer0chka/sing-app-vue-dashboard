@@ -12,17 +12,37 @@
         customHeader
       >
         <p class="widget-auth-info">Use your email to sign in.</p>
-        <!-- <form class="mt" @submit.prevent="login">
+        <form class="mt" @submit.prevent="login">
           <b-alert class="alert-sm" variant="danger" :show="!!errorMessage">
-            {{errorMessage}}
+            {{ errorMessage }}
           </b-alert>
           <div class="form-group">
-            <input class="form-control no-border" ref="email" required type="email" name="email" placeholder="Email" />
+            <input
+              class="form-control no-border"
+              ref="email"
+              required
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
           </div>
           <div class="form-group">
-            <input class="form-control no-border" ref="password" required type="password" name="password" placeholder="Password" />
+            <input
+              class="form-control no-border"
+              ref="password"
+              required
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
           </div>
-          <b-button type="submit" size="sm" class="auth-btn mb-3" variant="inverse">Login</b-button>
+          <b-button
+            type="submit"
+            size="sm"
+            class="auth-btn mb-3"
+            variant="inverse"
+            >Login</b-button
+          >
           <p class="widget-auth-info">or sign in with</p>
           <div class="social-buttons">
             <b-button variant="primary" class="social-button mb-2">
@@ -34,7 +54,7 @@
               <p class="social-text">MICROSOFT</p>
             </b-button>
           </div>
-        </form> -->
+        </form>
         <p class="widget-auth-info">Don't have an account? Sign up now!</p>
         <router-link class="d-block text-center" to="login"
           >Create an Account</router-link
