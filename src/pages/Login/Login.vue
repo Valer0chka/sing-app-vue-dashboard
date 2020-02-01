@@ -6,11 +6,13 @@
         Sing App
         <i class="fa fa-circle text-warning"></i>
       </h5>
-      <Widget class="widget-auth mx-auto" title="<h3 class='mt-0'>Login to your Web App</h3>" customHeader>
-        <p class="widget-auth-info">
-            Use your email to sign in.
-        </p>
-        <form class="mt" @submit.prevent="login">
+      <Widget
+        class="widget-auth mx-auto"
+        title="<h3 class='mt-0'>Login to your Web App</h3>"
+        customHeader
+      >
+        <p class="widget-auth-info">Use your email to sign in.</p>
+        <!-- <form class="mt" @submit.prevent="login">
           <b-alert class="alert-sm" variant="danger" :show="!!errorMessage">
             {{errorMessage}}
           </b-alert>
@@ -32,11 +34,11 @@
               <p class="social-text">MICROSOFT</p>
             </b-button>
           </div>
-        </form>
-        <p class="widget-auth-info">
-          Don't have an account? Sign up now!
-        </p>
-        <router-link class="d-block text-center" to="login">Create an Account</router-link>
+        </form> -->
+        <p class="widget-auth-info">Don't have an account? Sign up now!</p>
+        <router-link class="d-block text-center" to="login"
+          >Create an Account</router-link
+        >
       </Widget>
     </b-container>
     <footer class="auth-footer">
@@ -46,10 +48,10 @@
 </template>
 
 <script>
-import Widget from '@/components/Widget/Widget';
+import Widget from "@/components/Widget/Widget";
 
 export default {
-  name: 'LoginPage',
+  name: "LoginPage",
   components: { Widget },
   data() {
     return {
@@ -62,14 +64,14 @@ export default {
       const password = this.$refs.password.value;
 
       if (email.length !== 0 && password.length !== 0) {
-        window.localStorage.setItem('authenticated', true);
-        this.$router.push('/app/dashboard');
+        window.localStorage.setItem("authenticated", true);
+        this.$router.push("/app/dashboard");
       }
     },
   },
   created() {
-    if (window.localStorage.getItem('authenticated') === 'true') {
-      this.$router.push('/app/main/analytics');
+    if (window.localStorage.getItem("authenticated") === "true") {
+      this.$router.push("/app/main/analytics");
     }
   },
 };
